@@ -12,16 +12,12 @@ def ips_to_file():
 
     print('Starting')
     connection_string = "\\\\DISKSTATION\\DataStore\\Logs\\3RDAVE\\SYNOSYSLOGDB_3RDAVE - Copy.DB"
-    #connection_string = "\\\\DISKSTATION\\DataStore\\Logs\\3RDAVE\\2023-10-17_2023-11-16-Copy.DB"
-    #connection_string = "\\\\DISKSTATION\\DataStore\\Logs\\3RDAVE\\bak_SYNOSYSLOGDB_3RDAVE.DB"
     count = 0
     ipv4_regex = "\\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\b"
-    #file1 = open("d:\\RouterLogs\\IPs.csv", "w")
     field_names = ['ip','count']
-    query = "SELECT * FROM logs LIMIT 50000" 
+    query = "SELECT * FROM logs" 
 
     IP_dict = {}
-    #print(IP_dict)
     IPignorelist = ['127.0.0.1','99.145.235.143','127.0.0.1','8.8.8.8','8.8.4.4','1.1.1.1']
 
     print(query)
@@ -59,8 +55,8 @@ def ips_to_file():
             count = count + 1
 
         with open("d:\\RouterLogs\\IPs.csv", "w", newline='') as csv_file:  
-            writer = csv.DictWriter(csv_file,fieldnames=field_names)
-            writer.writeheader()    
+            writer = csv.writer(csv_file)#,fieldnames=field_names)
+            writer.writerow(field_names)    
             #writer.writerows(IP_dict) 
             
             for key, value in IP_dict.items():
