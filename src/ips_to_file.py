@@ -11,7 +11,7 @@ def ips_to_file():
     """
 
     print('Starting')
-    connection_string = "\\\\DISKSTATION\\DataStore\\Logs\\3RDAVE\\SYNOSYSLOGDB_3RDAVE - Copy.DB"
+    connection_string = "\\\\DISKSTATION\\DataStore\\Logs\\3RDAVE\\2025-11-21_2025-11-27.DB"
     count = 0
     ipv4_regex = "\\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\b"
     field_names = ['ip','count']

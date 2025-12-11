@@ -6,8 +6,8 @@ import pandas as pd
 def abuse_scroing(file_name):
 
     count = 0
-    break_count = 100
-    hit_count = 8
+    break_count = 500
+    hit_count = 20
 
     # Defining the api-endpoint
     url = 'https://api.abuseipdb.com/api/v2/check'
