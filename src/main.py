@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import Iterable, List
 
 DB_SEARCH_PATTERNS = [
-    r"\\DISKSTATION\DataStore\Logs\3RDAVE\*.DB"
+    r"\\DISKSTATION\DataStore\Logs\3RDAVE\20*.DB"
 ]
 DEFAULT_OUTPUT_CSV = Path(r"d:\RouterLogs\IPs.csv")
 DEFAULT_ABUSE_OUTPUT_CSV = Path(r"d:\RouterLogs\IPs_abuse.csv")
