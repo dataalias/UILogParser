@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+### Changed
+- `src/main.py` now lists `.DB` files in the configured log folder and queries each file instead of targeting a single database.
+
 ### Added
 - `src/abuse_filter.py` with `get_abusive_ips`, which selects IPs from the abuse CSV with `abuseConfidenceScore >= 50` and `count > 100`.
 - `abusive_ips_to_mongo_script`, which generates a mongo script that adds those IPs to the `DenyListIPAddresses` firewall group on the UDM Pro (validates IPs, prints a backup of the group, `$addToSet`, prints the result).
